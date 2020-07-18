@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   # 新規投稿画面へのルーティング
   get "/users/new", to: "users#new"
   get "/users", to: "users#index"

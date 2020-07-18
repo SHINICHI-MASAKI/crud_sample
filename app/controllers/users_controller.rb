@@ -11,13 +11,11 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
-    redirect_to action: :index
   end
 
   def destroy
     user = User.find(params[:id])
     user.destroy
-    redirect_to action: :index
   end
 
   def edit
@@ -27,7 +25,6 @@ class UsersController < ApplicationController
   def update
     user = User.find(params[:id])
     user.update(user_params)
-    redirect_to action: :index
   end
 
   private
